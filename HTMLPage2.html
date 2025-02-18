@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+<button onclick="
+   subscribe();
+ "class ="js-button">  subscribe 
+</button>
+
+<p>amazon shipping calculator</p>
+<input placeholder="cost of order" class="js-cost">
+<button onclick="calculateTotal();">calculate</button>
+
+
+
+<script>
+     function calculateTotal(){
+       const b = document.querySelector('.js-cost');
+       let c = Number(b.value);
+       if(c < 40){
+        c += 10;
+        console.log(c);
+
+       }
+       else{
+        console.log(c);
+       }
+     }
+    function subscribe(){
+    const a = document.querySelector('.js-button');
+
+    if ( a.innerText === 'subscribe') {
+        a.innerHTML = 'subscribed';
+
+    }
+    else{
+    a.innerHTML = 'subscribe';
+    }
+
+        }
+</script>
+
+</body>
+
+</html>
